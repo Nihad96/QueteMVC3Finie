@@ -6,8 +6,10 @@
         <h1>Les items</h1>
         <ul>
             {% for item in items %}
-                <li>{{ item.title }}</li>
+                <li>{{ item.title }}</li><a href="/items/update/{{ item.id }}"> Update</a><a href="/items/delete/{{ item.id }}"> Delete</a>
             {% endfor %}
         </ul>
     </section>
+
+    <a href="/items/add">Ajouter un item</a>
 {% endblock %}
